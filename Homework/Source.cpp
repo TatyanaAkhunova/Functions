@@ -1,6 +1,9 @@
 #include<iostream>
 using namespace std;
 
+#define tab "\t"
+#define delimiter "\n-----------------------------------\n"
+
 void FillRand(int arr[], const int n);
 void Print(int arr[], const int n);
 int Sum(int arr[], const int n);
@@ -14,6 +17,7 @@ void Sort(int arr[], const int n);
 void main()
 {
 	setlocale(LC_ALL, "");
+	
 	const int n = 5;
 	int arr[n];
 	int number_of_shifts;
@@ -25,6 +29,9 @@ void main()
 	cout << "Среднее арифметическое элементов массива: " << Avg(arr, n)<< endl;
 	cout << "Минимальное значение в массиве: " << minValueIn(arr, n) << endl;
 	cout << "Максимальное значение в массиве: " << maxValueIn(arr, n) << endl;
+
+    cout << delimiter << endl;
+
 	cout << "Введите количество сдвигов для сдвига влево: "; cin >> number_of_shifts;
 	shiftLeft(arr, n, number_of_shifts);
 	Print(arr, n);
