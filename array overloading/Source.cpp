@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 #define tab "\t"
@@ -35,9 +35,9 @@ void main()
 	int arr[ROWS][COLS];
 	FillRand(arr, ROWS, COLS);
 	
-	cout << "Ñóììà ýëåìåíòîâ ìàññèâà: " << Sum(arr, ROWS, COLS) << endl;
-	//cout << "Ñðåäíåå àðèôìåòè÷åñêîå ýëåìåíòîâ ìàññèâà: " << Avg(arr, ROWS, COLS) << endl;
-	//cout << "Ââåäèòå êîëè÷åñòâî ñäâèãîâ äëÿ ñäâèãà âëåâî: "; cin >> number_of_shifts;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Sum(arr, ROWS, COLS) << endl;
+	//cout << "Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Avg(arr, ROWS, COLS) << endl;
+	//cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ´Ð²Ð¸Ð³Ð¾Ð² Ð´Ð»Ñ ÑÐ´Ð²Ð¸Ð³Ð° Ð²Ð»ÐµÐ²Ð¾: "; cin >> number_of_shifts;
 	//ShiftLeft(arr, ROWS, COLS, number_of_shifts);
 	//Sort(arr, ROWS, COLS);
 	Print(arr, ROWS, COLS);
