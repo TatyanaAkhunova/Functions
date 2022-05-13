@@ -1,8 +1,9 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 
 #define tab "\t"
-#define delimiter "\n-----------------------------------\n"
+#define delimiter "\n-----------------------------------------------\n"
+
 
 void FillRand(int arr[], const int n);
 void Print(int arr[], const int n);
@@ -18,27 +19,28 @@ void main()
 {
 	setlocale(LC_ALL, "");
 	
-	const int n = 5;
+	const int n = 7;
 	int arr[n];
 	int number_of_shifts;
 	int number_of_shifts_r;
 	FillRand(arr, n);
 	Print(arr, n);
 	
-	cout << "Ñóììà ýëåìåíòîâ ìàññèâà: " << Sum(arr, n) << endl;
-	cout << "Ñðåäíåå àðèôìåòè÷åñêîå ýëåìåíòîâ ìàññèâà: " << Avg(arr, n)<< endl;
-	cout << "Ìèíèìàëüíîå çíà÷åíèå â ìàññèâå: " << minValueIn(arr, n) << endl;
-	cout << "Ìàêñèìàëüíîå çíà÷åíèå â ìàññèâå: " << maxValueIn(arr, n) << endl;
-
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Sum(arr, n) << endl;
+	cout << "Ð¡Ñ€ÐµÐ´Ð½ÐµÐµ Ð°Ñ€Ð¸Ñ„Ð¼ÐµÑ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°: " << Avg(arr, n)<< endl;
+	cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << minValueIn(arr, n) << endl;
+	cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ: " << maxValueIn(arr, n) << endl;
+	
     cout << delimiter << endl;
 
-	cout << "Ââåäèòå êîëè÷åñòâî ñäâèãîâ äëÿ ñäâèãà âëåâî: "; cin >> number_of_shifts;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ´Ð²Ð¸Ð³Ð¾Ð² Ð´Ð»Ñ ÑÐ´Ð²Ð¸Ð³Ð° Ð²Ð»ÐµÐ²Ð¾: "; cin >> number_of_shifts;
 	shiftLeft(arr, n, number_of_shifts);
 	Print(arr, n);
-	cout << "Ââåäèòå êîëè÷åñòâî ñäâèãîâ äëÿ ñäâèãà âïðàâî: "; cin >> number_of_shifts_r;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ´Ð²Ð¸Ð³Ð¾Ð² Ð´Ð»Ñ ÑÐ´Ð²Ð¸Ð³Ð° Ð²Ð¿Ñ€Ð°Ð²Ð¾: "; cin >> number_of_shifts_r;
 	shiftRight(arr, n, number_of_shifts_r);
 	Print(arr, n);
-	cout << "Ñîðòèðîâêà ìàññèâà â ïîðÿäêå âîçðàñòàíèÿ, ïðè ïîìîùè \"àëãîðèòìà âûáîðà\": " /*<< Sort(arr, n)*/ << endl;
+	cout << "Ð¡Ð¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð¼Ð°ÑÑÐ¸Ð²Ð° Ð² Ð¿Ð¾Ñ€ÑÐ´ÐºÐµ Ð²Ð¾Ð·Ñ€Ð°ÑÑ‚Ð°Ð½Ð¸Ñ: " << endl; 
+	Sort(arr, n);
 	Print(arr, n);
 }
 void FillRand(int arr[], const int n)
@@ -114,21 +116,20 @@ void shiftRight(int arr[], const int n, const int number_of_shifts_r)
 	}
 }
 void Sort(int arr[], const int n)
-{
-	int min, buffer; //äëÿ ïîèñêà ìèíèìàëüíîãî ýëåìåíòà è äëÿ îáìåíà
-	
-	for (int i = 0; i < n-1; i++)
+{	
+	for (int i = 0; i < n; i++)//ÑÑ‡ÐµÑ‚Ñ‡Ð¸Ðº 'i' Ð²Ñ‹Ð±Ð¸Ñ€Ð°ÐµÑ‚ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚, Ð² ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð½ÑƒÐ¶Ð½Ð¾ Ð¿Ð¾Ð¼ÐµÑÑ‚Ð¸Ñ‚ÑŒ Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ
 	{
-		min = i; // çàïîìèíàåì èíäåêñ òåêóùåãî ýëåìåíòà
-    // èùåì ìèíèìàëüíûé ýëåìåíò ÷òîáû ïîìåñòèòü íà ìåñòî i-îãî
-		for (int j = i + 1; j < n; j++)
+		for (int j = i + 1; j < n; j++) //ÑÑ‡ÐµÑ‚Ñ‡Ð¸Ðº 'j' Ð¿ÐµÑ€ÐµÐ±Ð¸Ñ€Ð°ÐµÑ‚ Ð¾ÑÑ‚Ð°Ð»ÑŒÐ½Ñ‹Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð¼Ð°ÑÑÐ¸Ð²Ð°
 		{
-			if (arr[j] < arr[min]) // åñëè ýëåìåíò ìåíüøå ìèíèìàëüíîãî,
-				min = j; // çàïîìèíàåì åãî èíäåêñ â min
+			//arr[i] - Ð²Ñ‹Ð±Ñ€Ð°Ð½Ð½Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚
+			//arr[j] - Ð¿ÐµÑ€ÐµÐ±Ð¸Ñ€Ð°ÐµÐ¼Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚
+			if (arr[j] < arr[i])
+			{
+				int buffer = arr[i];
+				arr[i] = arr[j];
+				arr[j] = buffer;
+			}
 		}
-		buffer = arr[i]; // ìåíÿåì ìåñòàìè i-ûé è ìèíèìàëüíûé ýëåìåíòû
-		arr[i] = arr[min];
-		arr[min] = buffer;
 	}
 	//return 0;
 }
