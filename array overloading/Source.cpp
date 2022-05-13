@@ -1,15 +1,15 @@
-﻿#include <iostream>
+﻿//https://github.com/TatyanaAkhunova/Functions/blob/master/array%20overloading/Source.cpp
+#include <iostream>
 using namespace std;
 
 #define tab "\t"
 #define delimiter "\n--------------------------------------------------\n"
 
 const int ROWS = 3;
-const int COLS = 5;
-//const int number_of_shifts;
+const int COLS = 6;
 
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS);
-void FillRand(double arr[ROWS][COLS], const int ROWS, const int COLS);
+void FillRand(double arr[ROWS][COLS], const int ROWS_d, const int COLS_d);
 void FillRand(char arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void Print(int arr[ROWS][COLS], const int ROWS, const int COLS);
@@ -19,29 +19,39 @@ void Print(char arr[ROWS][COLS], const int ROWS, const int COLS);
 int Sum(int arr[ROWS][COLS], const int ROWS, const int COLS);
 double Sum(double arr[ROWS][COLS], const int ROWS, const int COLS);
 
-//double Avg(int arr[ROWS][COLS], const int ROWS, const int COLS);
-//double Avg(double arr[ROWS][COLS], const int ROWS, const int COLS);
+/*double Avg(int arr[ROWS][COLS], const int ROWS, const int COLS);
+double Avg(double arr[ROWS][COLS], const int ROWS, const int COLS);
 
+void ShiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, const int number_of_shifts);
+void ShiftLeft(double arr[ROWS][COLS], const int ROWS, const int COLS, const int number_of_shifts);
 
-//void ShiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, const int number_of_shifts);
-//void ShiftLeft(double arr[ROWS][COLS], const int ROWS, const int COLS, const int number_of_shifts);
-
-//void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS);
-//void Sort(double arr[ROWS][COLS], const int ROWS, const int COLS);
+void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS);
+void Sort(double arr[ROWS][COLS], const int ROWS, const int COLS);*/
 
 void main()
 {
 	setlocale(LC_ALL, "");
+	
+	//const int number_of_shifts;
 	int arr[ROWS][COLS];
 	FillRand(arr, ROWS, COLS);
-	
+	Print(arr, ROWS, COLS);
 	cout << "Сумма элементов массива: " << Sum(arr, ROWS, COLS) << endl;
+	cout << delimiter << endl;
+	
+	double arr_d[ROWS][COLS];
+	FillRand(arr_d, ROWS, COLS);
+	Print(arr_d, ROWS, COLS);
+	cout << delimiter << endl;
+
+	char arr_c[ROWS][COLS];
+	FillRand(arr_c, ROWS, COLS);
+	Print(arr_c, ROWS, COLS);
+	
 	//cout << "Среднее арифметическое элементов массива: " << Avg(arr, ROWS, COLS) << endl;
 	//cout << "Введите количество сдвигов для сдвига влево: "; cin >> number_of_shifts;
 	//ShiftLeft(arr, ROWS, COLS, number_of_shifts);
 	//Sort(arr, ROWS, COLS);
-	Print(arr, ROWS, COLS);
-	
 }
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS)
 {
