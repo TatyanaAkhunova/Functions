@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Overload in progress", "Ove
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Template", "Template\Template.vcxproj", "{3A89D91A-47E2-47C8-ABAD-1B6E57D65C6C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Array overloading", "array overloading\array overloading.vcxproj", "{E85FB49A-BC5B-4B1B-8FF9-938B9B089467}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{3A89D91A-47E2-47C8-ABAD-1B6E57D65C6C}.Release|x64.Build.0 = Release|x64
 		{3A89D91A-47E2-47C8-ABAD-1B6E57D65C6C}.Release|x86.ActiveCfg = Release|Win32
 		{3A89D91A-47E2-47C8-ABAD-1B6E57D65C6C}.Release|x86.Build.0 = Release|Win32
+		{E85FB49A-BC5B-4B1B-8FF9-938B9B089467}.Debug|x64.ActiveCfg = Debug|x64
+		{E85FB49A-BC5B-4B1B-8FF9-938B9B089467}.Debug|x64.Build.0 = Debug|x64
+		{E85FB49A-BC5B-4B1B-8FF9-938B9B089467}.Debug|x86.ActiveCfg = Debug|Win32
+		{E85FB49A-BC5B-4B1B-8FF9-938B9B089467}.Debug|x86.Build.0 = Debug|Win32
+		{E85FB49A-BC5B-4B1B-8FF9-938B9B089467}.Release|x64.ActiveCfg = Release|x64
+		{E85FB49A-BC5B-4B1B-8FF9-938B9B089467}.Release|x64.Build.0 = Release|x64
+		{E85FB49A-BC5B-4B1B-8FF9-938B9B089467}.Release|x86.ActiveCfg = Release|Win32
+		{E85FB49A-BC5B-4B1B-8FF9-938B9B089467}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

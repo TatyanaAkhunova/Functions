@@ -100,7 +100,7 @@ void main()
 	}
 	double Avg(int arr[], const int n)
 	{
-		//Среднее фрифметическое:
+		//Среднее арифметическое:
 		return (double)Sum(arr, n) / n;
 	}
 	void ShiftLeft(int arr[], const int n, const int number_of_shifts)
