@@ -1,4 +1,5 @@
-﻿#include<iostream>
+﻿//https://github.com/TatyanaAkhunova/Functions/blob/Templated2/Template/Main.cpp
+#include<iostream>
 using namespace std;
 
 #define tab "\t"
@@ -14,8 +15,8 @@ void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 template<typename T>
 void Print(T arr[], const int n);
-void Print(double arr[], const int n);
-void Print(char arr[], const int n);
+//void Print(double arr[], const int n);
+//void Print(char arr[], const int n);
 template<typename T>
 void Print(T arr[ROWS][COLS], const int ROWS, const int COLS);
 
@@ -28,8 +29,8 @@ double Avg(T arr[], const int n);
 template<typename T>
 void shiftLeft(T arr[], const int n, const int number_of_shifts);
 
-void shiftRight(int arr[], const int n, const int number_of_shifts_2);
-void shiftRight(double arr[], const int n, const int number_of_shifts_2);
+//void shiftRight(int arr[], const int n, const int number_of_shifts_2);
+//void shiftRight(double arr[], const int n, const int number_of_shifts_2);
 
 
 void main()
