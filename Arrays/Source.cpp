@@ -1,4 +1,4 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
 
 void FillRand(int arr[], const int n);
@@ -12,29 +12,29 @@ void main()
 	setlocale(LC_ALL, "");
 	const int n = 5;
 	int arr[n];
-	//Заполнение массива случайными числами
+	//Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё
 	FillRand(arr, n);
-	//Вывод массива на экран
+	//Р’С‹РІРѕРґ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ
 	Print(arr, n);
 
-	//Сумма элементов массива:
-	cout << "Сумма элементов массива: " << Sum(arr, n) << endl;
-	cout << "Среднее арифметическое элементов массива: " << Avg(arr, n) << endl;
+	//РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°:
+	cout << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Sum(arr, n) << endl;
+	cout << "РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << Avg(arr, n) << endl;
 
 	int number_of_shifts;
-	cout << "Введите количество сдвигов: "; cin >> number_of_shifts;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ: "; cin >> number_of_shifts;
 	ShiftLeft(arr, n, number_of_shifts);
 	Print(arr, n);
 	
 
 	const int SIZE = 8;
 	int brr[SIZE];
-	//Заполнение массива случайными числами
+	//Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё
 	for (int i = 0; i < SIZE; i++)
 	{
 		brr[i] = rand() % 100;
 	}
-	//Вывод массива на экран
+	//Р’С‹РІРѕРґ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ
 	for (int i = 0; i < SIZE; i++)
 	{
 		cout << brr[i] << "\t";
@@ -42,17 +42,17 @@ void main()
 	}
 	cout << endl;
 
-	//Сумма элементов массива:
+	//РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°:
 	int sum = 0;
 	for (int i = 0; i < SIZE; i++)
 	{
 		sum += brr[i];
 	}
-	cout << "Сумма элементов массива: " << sum << endl;
-	cout << "Среднее арифметическое элементов массива: " << (double)sum / SIZE << endl;
+	cout << "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << sum << endl;
+	cout << "РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << (double)sum / SIZE << endl;
 
 	//int number_of_shifts;
-	cout << "Введите количество сдвигов: "; cin >> number_of_shifts;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ: "; cin >> number_of_shifts;
 	for (int i = 0; i < number_of_shifts; i++)
 	{
 		int buffer = brr[0];
@@ -72,7 +72,7 @@ void main()
 }
 	void FillRand(int arr[], const int n)
 	{
-		//Заполнение массива случайными числами:
+		//Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё:
 		for (int i = 0; i < n; i++)
 		{
 			arr[i] = rand() % 100;
@@ -80,7 +80,7 @@ void main()
 	}
 	void Print(int arr[], const int n)
 	{
-		//Вывод массива на экран:
+		//Р’С‹РІРѕРґ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ:
 		for (int i = 0; i < n; i++)
 		{
 			cout << arr[i] << "\t";
@@ -90,7 +90,7 @@ void main()
 	}
 	int Sum(int arr[], const int n)
 	{
-		//Сумма элементов массива:
+		//РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°:
 		int sum = 0;
 		for (int i = 0; i < n; i++)
 		{
@@ -100,7 +100,7 @@ void main()
 	}
 	double Avg(int arr[], const int n)
 	{
-		//Среднее арифметическое:
+		//РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ:
 		return (double)Sum(arr, n) / n;
 	}
 	void ShiftLeft(int arr[], const int n, const int number_of_shifts)
